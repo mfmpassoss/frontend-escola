@@ -1,0 +1,69 @@
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Título */
+.container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho */
+th {
+  background: #2c3e50;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Linhas */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Hover */
+tr:hover {
+  background: #f9f9f9;
+}
+
+/* Status */
+.status-enviado {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.status-erro {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Badge estilo */
+.badge {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.badge-success {
+  background: #eafaf1;
+  color: #2ecc71;
+}
+
+.badge-error {
+  background: #fdecea;
+  color: #e74c3c;
+}

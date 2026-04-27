@@ -1,0 +1,195 @@
+/* CONTAINER */
+.relatorio-container {
+  padding: 30px;
+  background: #0f172a;
+  min-height: 100vh;
+  color: white;
+}
+
+/* SEÇÕES */
+.relatorio-container .secao {
+  margin-bottom: 30px;
+}
+
+.relatorio-container .secao h2 {
+  margin-bottom: 10px;
+  color: #94a3b8;
+}
+
+/* GRID */
+.relatorio-container .grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* CARDS */
+.relatorio-container .card {
+  flex: 1;
+  min-width: 180px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* TAMANHO */
+.relatorio-container .card.grande {
+  min-width: 250px;
+}
+
+.relatorio-container .card.destaque {
+  border: 2px solid white;
+}
+
+/* TEXTOS */
+.relatorio-container .card h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.relatorio-container .card p {
+  font-size: 24px;
+}
+
+/* CORES */
+.relatorio-container .card.verde { background: #22c55e; }
+.relatorio-container .card.vermelho { background: #ef4444; }
+.relatorio-container .card.azul { background: #3b82f6; }
+.relatorio-container .card.roxo { background: #7c3aed; }
+
+/* BOTÃO */
+.relatorio-container .btn-voltar {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+.relatorio-container {
+  padding: 30px;
+  background: #0f172a;
+  min-height: 100vh;
+  color: white;
+}
+
+/* SEÇÕES */
+.relatorio-container .secao {
+  margin-bottom: 30px;
+}
+
+.relatorio-container h2 {
+  margin-bottom: 10px;
+  color: #94a3b8;
+}
+
+/* GRID */
+.relatorio-container .grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* CARDS */
+.relatorio-container .card {
+  flex: 1;
+  min-width: 180px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  cursor: default;
+}
+
+.relatorio-container .card:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+/* CORES */
+.relatorio-container .card.verde { background: #22c55e; }
+.relatorio-container .card.vermelho { background: #ef4444; }
+.relatorio-container .card.azul { background: #3b82f6; }
+.relatorio-container .card.roxo { background: #7c3aed; }
+
+.relatorio-container .card.destaque {
+  border: 2px solid white;
+}
+
+/* LISTA */
+.relatorio-container .lista-detalhes {
+  margin-top: 30px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.relatorio-container .item-lista {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* NOME FIXO */
+.relatorio-container .item-lista strong {
+  width: 200px; /* tamanho fixo */
+  min-width: 200px;
+}
+
+/* INPUT OCUPA O RESTO */
+.relatorio-container .item-lista input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.relatorio-container .item-lista input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* BOTÃO */
+.relatorio-container .btn-voltar {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+/* LINHA */
+.relatorio-container .item-lista {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* NOME MAIOR */
+.relatorio-container .item-lista strong {
+  width: 260px;        /* aumentei */
+  min-width: 260px;
+  white-space: nowrap; /* não quebra linha */
+  overflow: hidden;
+  text-overflow: ellipsis; /* corta com ... se for grande */
+}
+
+/* INPUT MENOR */
+.relatorio-container .item-lista input {
+  width: 180px; /* menor */
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+}
+.relatorio-container .item-lista {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px; /* 👈 AQUI resolve */
+}
