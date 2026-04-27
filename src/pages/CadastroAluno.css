@@ -443,3 +443,157 @@ body {
 .btn-delete {
   margin-left: 8px;
 }
+@media (max-width: 768px) {
+
+  /* 📦 Container geral */
+  .container {
+    padding: 10px;
+  }
+
+  /* 📋 Card principal */
+  .card-principal {
+    padding: 12px;
+    width: 100%;
+  }
+
+  /* 🧾 Formulário */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* 📊 TABELA (ESSENCIAL) */
+  .tabela {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  /* 📌 Células */
+  th, td {
+    padding: 8px;
+  }
+
+  /* 🎯 AÇÕES (botões) */
+  .acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .whatsapp-btn,
+  .btn-delete {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 📈 RELATÓRIOS */
+  .relatorios-esquerda,
+  .relatorios-direita {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+}
+@media (max-width: 480px) {
+  .tabela {
+    font-size: 11px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+.nome-aluno {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+
+  .tabela {
+    font-size: 10px;
+  }
+
+  th, td {
+    padding: 4px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .tabela {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+}
+@media (max-width: 768px) {
+
+  input {
+    padding: 5px;
+    font-size: 8px;
+
+  }
+
+  button {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .card-principal {
+    padding: 10px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .titulo {
+    font-size: 18px;
+  }
+
+}
+input::placeholder {
+  font-size: 12px;
+}
+@media (max-width: 768px) {
+
+  .card-principal {
+    max-width: 100%;
+    padding: 15px;
+    padding: 0px;
+  }
+
+
+  input::placeholder {
+  font-size: 9px;
+}
+* {
+  box-sizing: border-box;
+}
