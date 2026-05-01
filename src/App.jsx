@@ -37,7 +37,7 @@ function App() {
       <Logs />
     </PrivateRoute>
   }
-/>
+/>   
 
     </Routes>
   );

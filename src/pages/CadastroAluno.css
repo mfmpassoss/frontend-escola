@@ -1,4 +1,7 @@
 /* FUNDO GERAL */
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   background: #0f172a;
@@ -593,7 +596,4 @@ input::placeholder {
 
   input::placeholder {
   font-size: 9px;
-}
-* {
-  box-sizing: border-box;
 }
