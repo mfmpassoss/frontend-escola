@@ -229,10 +229,19 @@ body {
   background: #2563eb;
 }
 
+/* LAYOUT PRINCIPAL (DESKTOP) */
+.aulas,
+.financeiro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
 /* ========================= */
-/* RESPONSIVO */
+/* RESPONSIVO LIMPO */
 /* ========================= */
 
+/* 📱 TABLET */
 @media (max-width: 1000px) {
 
   .container {
@@ -243,220 +252,39 @@ body {
   .relatorios-direita {
     position: static;
     width: 100%;
-    flex-direction: row;
-    justify-content: center;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
   .card {
-    width: 140px;
+    flex: 1 1 200px;
+    max-width: 300px;
   }
 
   .btn-cobrar,
   .btn-cobrar-pagamento,
   .btn-lembrete,
   .btn-relatorios {
-    width: 140px;
+    width: 100%;
   }
 }
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 23, 42, 0.55); /* mais elegante */
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
 
-.modal {
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 16px;
-  width: 420px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  animation: fadeIn 0.2s ease-in-out;
-}
 
-.modal h2 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-  color: #111827;
-}
-
-.modal label {
-  font-size: 13px;
-  font-weight: 500;
-  color: #374151;
-}
-
-.modal textarea {
-  width: 100%;
-  height: 90px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #d1d5db;
-  outline: none;
-  font-size: 14px;
-  transition: 0.2s;
-}
-
-.modal textarea:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-}
-
-.modal input[type="file"] {
-  font-size: 13px;
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.modal-actions button {
-  flex: 1;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-/* botão enviar */
-.modal-actions button:first-child {
-  background: #22c55e;
-  color: white;
-  margin-right: 8px;
-}
-
-.modal-actions button:first-child:hover {
-  background: #16a34a;
-}
-
-/* botão cancelar */
-.modal-actions button:last-child {
-  background: #e5e7eb;
-  color: #374151;
-}
-
-.modal-actions button:last-child:hover {
-  background: #d1d5db;
-}
-
-/* animação suave */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.btn-bolsa {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
-  color: white;
-
-  border: none;
-  border-radius: 12px;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
-}
-
-/* hover */
-.btn-bolsa:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
-}
-
-/* click */
-.btn-bolsa:active {
-  transform: scale(0.97);
-}
-.btn-delete {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-  color: #fff;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.btn-delete:hover {
-  background: linear-gradient(135deg, #f87171, #b91c1c);
-  transform: scale(1.05);
-}
-
-.btn-delete:active {
-  transform: scale(0.95);
-}
-
-.btn-delete:disabled {
-  background: #9ca3af;
-  cursor: not-allowed;
-  box-shadow: none;
-}
-.btn-delete {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-delete::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0.2);
-  top: 0;
-  left: -100%;
-  transition: left 0.3s ease;
-}
-
-.btn-delete:hover::after {
-  left: 100%;
-}
-.btn-delete {
-  margin-left: 8px;
-}
+/* 📱 MOBILE */
 @media (max-width: 768px) {
 
-  /* 📦 Container geral */
   .container {
     padding: 10px;
   }
 
-  /* 📋 Card principal */
   .card-principal {
     padding: 12px;
     width: 100%;
   }
 
-  /* 🧾 Formulário */
+  /* FORM */
   .form {
     display: flex;
     flex-direction: column;
@@ -466,14 +294,16 @@ body {
   input {
     width: 100%;
     font-size: 14px;
+    padding: 8px;
   }
 
   button {
     width: 100%;
     font-size: 14px;
+    padding: 10px;
   }
 
-  /* 📊 TABELA (ESSENCIAL) */
+  /* TABELA */
   .tabela {
     display: block;
     overflow-x: auto;
@@ -481,12 +311,11 @@ body {
     font-size: 12px;
   }
 
-  /* 📌 Células */
   th, td {
     padding: 8px;
   }
 
-  /* 🎯 AÇÕES (botões) */
+  /* AÇÕES */
   .acoes {
     display: flex;
     flex-direction: column;
@@ -499,19 +328,31 @@ body {
     text-align: center;
   }
 
-  /* 📈 RELATÓRIOS */
-  .relatorios-esquerda,
-  .relatorios-direita {
-    width: 100%;
-    margin-top: 10px;
+  /* RELATÓRIOS (CORRIGIDO) */
+  .aulas,
+  .financeiro {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .card {
     width: 100%;
   }
 
+  .titulo {
+    font-size: 18px;
+  }
+
+  input::placeholder {
+    font-size: 11px;
+  }
 }
+
+
+/* 📱 MOBILE PEQUENO */
 @media (max-width: 480px) {
+
   .tabela {
     font-size: 11px;
   }
@@ -519,78 +360,8 @@ body {
   h2 {
     font-size: 18px;
   }
-}
-.nome-aluno {
-  max-width: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-@media (max-width: 768px) {
-
-  .tabela {
-    font-size: 10px;
-  }
-
-  th, td {
-    padding: 4px;
-  }
-
-  button {
-    font-size: 10px;
-    padding: 4px;
-  }
-
-}
-@media (max-width: 768px) {
-
-  .tabela {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-}
-@media (max-width: 768px) {
-
-  input {
-    padding: 5px;
-    font-size: 8px;
-
-  }
-
-  button {
-    padding: 8px;
-    font-size: 13px;
-  }
-
-}
-@media (max-width: 768px) {
-
-  .card-principal {
-    padding: 10px;
-  }
-
-}
-@media (max-width: 768px) {
-
-  .titulo {
-    font-size: 18px;
-  }
-
-}
-input::placeholder {
-  font-size: 12px;
-}
-@media (max-width: 768px) {
-
-  .card-principal {
-    max-width: 100%;
-    padding: 15px;
-    padding: 0px;
-  }
-
 
   input::placeholder {
-  font-size: 9px;
+    font-size: 9px;
+  }
 }
