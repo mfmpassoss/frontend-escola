@@ -19,6 +19,8 @@ body {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin-top: 4%;
+    margin-bottom: 20px;
 }
 
 /* TÍTULO */
@@ -330,15 +332,18 @@ body {
 
   /* RELATÓRIOS (CORRIGIDO) */
   .aulas,
-  .financeiro {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
+.financeiro {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 👈 centraliza */
+  gap: 12px;
+}
 
-  .card {
-    width: 100%;
-  }
+.card {
+  width: 90%;       /* 👈 não fica colado nas bordas */
+  max-width: 350px; /* 👈 deixa bonito e padrão */
+  margin: 0 auto;
+}
 
   .titulo {
     font-size: 18px;
