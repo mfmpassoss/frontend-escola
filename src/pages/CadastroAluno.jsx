@@ -396,7 +396,7 @@ const alunosAtualizados = verificarVencimentos(
 
                   <td>
                   <select
-  value={aluno.fez_aula ? "true" : false}
+  value={aluno.fez_aula ? "true" : "false"}
   onChange={(e) => atualizarStatus(index, e.target.value === "true")}
 >
   <option value="true">Sim</option>
@@ -406,11 +406,11 @@ const alunosAtualizados = verificarVencimentos(
 
                   <td>
                     <select
-  value={aluno.pagou ? "true" : false}
+  value={aluno.pagou ? "true" : "false"}
   onChange={(e) => atualizarPagamento(index, e.target.value === "true")}
 >
   <option value="true">Sim</option>
-  "<option value="false">Não</option>
+  <option value="false">Não</option>
 </select>
                   </td>
 
@@ -561,14 +561,7 @@ Disparar Bolsa
       </div>
 
 
-      return (
-  <div className="container">
-
-    {/* tudo que você já tem */}
-
-    <div className="relatorios-direita">
-      ...
-    </div>
+      
 
     {/* 🔥 MODAL AQUI */}
     {modalBolsa && (
@@ -609,10 +602,11 @@ Disparar Bolsa
 
         </div>
       </div>
-    )}
+    )
+    }
 
-  </div>
-);
+  
+
 
 
 
